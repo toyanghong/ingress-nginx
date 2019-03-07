@@ -28,8 +28,12 @@ kubectl apply -f https://raw.githubusercontent.com/toyanghong/ingress-nginx/mast
        env:
   ```
   
-  # 注意 kd 需要添加后端协议 nginx.ingress.kubernetes.io/backend-protocol: HTTPS
-
+  # 注意 kd 需要添加后端协议 
+  
+ ```
+  nginx.ingress.kubernetes.io/backend-protocol: HTTPS
+ 
+ ```
 
 ## Help us to improve the NGINX Ingress controller [completing the survey](https://docs.google.com/forms/d/15ULTOvYDsV920V0GWrspew4yyjEmTAi740Wr34UgKwA/viewform)
 
