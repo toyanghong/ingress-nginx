@@ -1,3 +1,31 @@
+
+
+
+
+# 1 部署ingress-nginx
+
+```
+kubectl apply -f https://raw.githubusercontent.com/toyanghong/ingress-nginx/master/deploy/mandatory.yaml
+
+```
+
+ # 2 删除服务 ingress-nginx  
+ # 3 修改hostNetwork: true
+ 
+ ``` 
+   spec:
+      hostNetwork: true #<<============添加主机端口模式
+      containers:
+      - args:
+        - /nginx-ingress-controller
+        - --configmap=$(POD_NAMESPACE)/nginx-configuration
+        - --tcp-services-configmap=$(POD_NAMESPACE)/tcp-services
+        - --udp-services-configmap=$(POD_NAMESPACE)/udp-services
+        - --annotations-prefix=nginx.ingress.kubernetes.io
+       env:
+  ```
+
+
 ## Help us to improve the NGINX Ingress controller [completing the survey](https://docs.google.com/forms/d/15ULTOvYDsV920V0GWrspew4yyjEmTAi740Wr34UgKwA/viewform)
 
 ---
