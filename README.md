@@ -10,6 +10,9 @@ kubectl apply -f https://raw.githubusercontent.com/toyanghong/ingress-nginx/mast
 ```
 
  # 2 删除服务 ingress-nginx  
+ 
+ 避免日志一直提示缺少服务
+ 
  # 3 修改hostNetwork: true
  
  ``` 
