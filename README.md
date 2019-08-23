@@ -13,11 +13,13 @@ kubectl apply -f https://raw.githubusercontent.com/toyanghong/ingress-nginx/mast
  
  避免日志一直提示缺少服务
  以下配置删除 从yaml中
+ 
  ```
              - --tcp-services-configmap=$(POD_NAMESPACE)/tcp-services
             - --udp-services-configmap=$(POD_NAMESPACE)/udp-services
             - --publish-service=$(POD_NAMESPACE)/ingress-nginx
-            ```
+ ```
+ 
  
  # 3 修改hostNetwork: true
  
