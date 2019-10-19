@@ -36,6 +36,13 @@ kubectl apply -f https://raw.githubusercontent.com/toyanghong/ingress-nginx/mast
        env:
   ```
   
+  # 4 配置文件  （可设置 用于配置ingress 比如标头 获取客户端真实ip）
+ 
+ ``` 
+  apply -f https://raw.githubusercontent.com/toyanghong/ingress-nginx/master/configmap.yaml
+
+  ```
+  
   # 注意 kd 需要添加后端协议 
   
  ```
